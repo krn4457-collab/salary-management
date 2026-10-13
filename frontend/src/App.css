@@ -15,3 +15,19 @@ body { margin: 0; }
 .pager button:disabled { opacity: 0.4; cursor: default; }
 .error { background: #fee; color: #900; padding: 10px; border-radius: 8px; margin-bottom: 12px; }
 .loading { padding: 24px; text-align: center; color: #666; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+.card { background: #fff; border-radius: 12px; padding: 14px; }
+.card .label { font-size: 12px; color: #666; }
+.card .value { font-size: 20px; font-weight: 700; margin-top: 4px; }
+.panels { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; margin-bottom: 8px; }
+.panel { background: #fff; border-radius: 12px; padding: 14px; }
+.panel h3 { margin: 8px 0; font-size: 14px; }
+.bar-row { display: grid; grid-template-columns: 120px 1fr 130px; gap: 8px; align-items: center; font-size: 13px; margin: 6px 0; }
+.bar { background: #eee; border-radius: 6px; height: 10px; overflow: hidden; }
+.bar div { background: #111; height: 100%; }
+.link { background: none; border: none; color: #2563eb; cursor: pointer; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; }
+.modal { background: #fff; padding: 20px; border-radius: 12px; min-width: 320px; }
+.modal input { width: 100%; padding: 8px 10px; margin: 12px 0; border: 1px solid #ddd; border-radius: 8px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.modal-actions .primary { background: #111; color: #fff; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; }
