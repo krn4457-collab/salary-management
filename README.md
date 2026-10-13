@@ -27,6 +27,16 @@ npm run dev
 
 API docs: http://localhost:8000/docs
 
+## Docker (recommended demo path)
+
+```bash
+docker compose up --build
+```
+
+Backend seeds 10,000 employees on start. App: http://localhost:5173, API: http://localhost:8000/docs.
+To deploy: push to Render/Fly using `render.yaml` (backend web service + frontend static site
+with `VITE_API_URL` pointing at the backend URL).
+
 ## Repo layout
 
 ```

@@ -1,0 +1,15 @@
+# Render deploy (alternative to docker-compose)
+# Backend: Web Service — root ./backend, build `pip install -r requirements.txt`,
+# start `sh -c "python scripts/seed.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT"`.
+# Frontend: Static Site — root ./frontend, build `npm ci && npm run build`,
+# publish `dist`, env VITE_API_URL=<backend-url>.
+services:
+  - type: web
+    name: acme-salary-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: sh -c "python scripts/seed.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
