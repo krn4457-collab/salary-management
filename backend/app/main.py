@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .database import Base, engine
 from . import models  # noqa: F401  (register tables)
 from .routers import employees
+from .routers import stats
 
 Base.metadata.create_all(bind=engine)
 
@@ -20,6 +21,7 @@ app.add_middleware(
 )
 
 app.include_router(employees.router)
+app.include_router(stats.router)
 
 
 @app.get("/api/health")
