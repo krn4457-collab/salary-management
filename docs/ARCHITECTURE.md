@@ -1,5 +1,14 @@
 # Architecture
 
+![Architecture diagram](architecture.svg)
+
+```mermaid
+flowchart LR
+    UI[React Vite UI] --> API[FastAPI REST]
+    API --> DB[(SQLite)]
+    Seed[Seed script 10k] -.-> DB
+```
+
 ```
 React (Vite)  →  REST JSON  →  FastAPI  →  SQLite (SQLAlchemy)
                      /api/employees (CRUD, search/filter/sort/page)

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" font-family="sans-serif">
+  <rect x="8" y="8" width="744" height="244" rx="12" fill="#f6f7f9" stroke="#ddd"/>
+  <text x="24" y="34" font-size="14" font-weight="bold">ACME Salary Management — Architecture</text>
+  <rect x="24" y="52" width="160" height="72" rx="8" fill="#fff" stroke="#111"/>
+  <text x="36" y="76" font-size="12" font-weight="bold">React (Vite)</text>
+  <text x="36" y="94" font-size="11" fill="#555">Dashboard + table</text>
+  <text x="36" y="110" font-size="11" fill="#555">+ salary edit modal</text>
+  <rect x="216" y="52" width="180" height="72" rx="8" fill="#111"/>
+  <text x="228" y="76" font-size="12" font-weight="bold" fill="#fff">FastAPI (REST JSON)</text>
+  <text x="228" y="94" font-size="11" fill="#ddd">/api/employees (CRUD)</text>
+  <text x="228" y="110" font-size="11" fill="#ddd">/api/stats/* (analytics)</text>
+  <rect x="428" y="52" width="150" height="72" rx="8" fill="#fff" stroke="#111"/>
+  <text x="440" y="76" font-size="12" font-weight="bold">SQLite</text>
+  <text x="440" y="94" font-size="11" fill="#555">employees table</text>
+  <text x="440" y="110" font-size="11" fill="#555">indexed + salary_usd</text>
+  <rect x="610" y="52" width="126" height="72" rx="8" fill="#fff" stroke="#111"/>
+  <text x="622" y="76" font-size="12" font-weight="bold">Seed script</text>
+  <text x="622" y="94" font-size="11" fill="#555">10,000 rows</text>
+  <text x="622" y="110" font-size="11" fill="#555">deterministic</text>
+  <line x1="184" y1="88" x2="216" y2="88" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="396" y1="88" x2="428" y2="88" stroke="#111" stroke-width="2"/>
+  <line x1="610" y1="100" x2="578" y2="130" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="24" y="150" width="340" height="76" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="36" y="172" font-size="12" font-weight="bold">pytest (12 tests, in-memory DB)</text>
+  <text x="36" y="190" font-size="11" fill="#555">pagination · search/filter · sort · salary validation · stats</text>
+  <text x="36" y="206" font-size="11" fill="#555">~0.24s, deterministic</text>
+  <rect x="396" y="150" width="340" height="76" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="408" y="172" font-size="12" font-weight="bold">Docker + Render deploy</text>
+  <text x="408" y="190" font-size="11" fill="#555">compose up --build · backend seeds on start</text>
+  <text x="408" y="206" font-size="11" fill="#555">VITE_API_URL wires UI to API</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#111"/></marker></defs>
+</svg>
