@@ -123,7 +123,12 @@ export default function App() {
                 <td>{e.level}</td>
                 <td>{e.base_salary.toLocaleString()} {e.currency}</td>
                 <td>${e.salary_usd.toLocaleString()}</td>
-                <td><button className="link" onClick={() => { setEditing(e); setNewSalary(e.base_salary); }}>Edit</button></td>
+                <td><button className="link" onClick={() => { setEditing(e); setNewSalary(e.base_salary); }}>Edit</button>
+                {" · "}<button className="link danger" onClick={async () => {
+                  if (!window.confirm(`Delete ${e.first_name} ${e.last_name}?`)) return;
+                  try { await api.deleteEmployee(e.id); reload(); }
+                  catch (err) { setError(err.message); }
+                }}>Delete</button></td>
               </tr>
             ))}
           </tbody>

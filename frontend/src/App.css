@@ -26,6 +26,7 @@ body { margin: 0; }
 .bar { background: #eee; border-radius: 6px; height: 10px; overflow: hidden; }
 .bar div { background: #111; height: 100%; }
 .link { background: none; border: none; color: #2563eb; cursor: pointer; }
+.link.danger { color: #b91c1c; }
 .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; }
 .modal { background: #fff; padding: 20px; border-radius: 12px; min-width: 320px; }
 .modal input { width: 100%; padding: 8px 10px; margin: 12px 0; border: 1px solid #ddd; border-radius: 8px; }

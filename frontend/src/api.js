@@ -19,6 +19,7 @@ export const api = {
   getEmployee: (id) => req(`/api/employees/${id}`),
   updateSalary: (id, base_salary) =>
     req(`/api/employees/${id}`, { method: "PATCH", body: JSON.stringify({ base_salary }) }),
+  deleteEmployee: (id) => req(`/api/employees/${id}`, { method: "DELETE" }),
   filters: () => req("/api/employees/meta/filters"),
   summary: () => req("/api/stats/summary"),
   byDept: () => req("/api/stats/by-department"),
