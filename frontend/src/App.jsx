@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "./api";
+import { isValidSalary } from "./validate";
 import "./App.css";
 
 const PAGE_SIZE = 20;
@@ -39,7 +40,7 @@ export default function App() {
 
   const saveSalary = async () => {
     const val = Number(newSalary);
-    if (!val || val <= 0 || val >= 1000000) { setError("Salary must be between 0 and 1,000,000"); return; }
+    if (!isValidSalary(newSalary)) { setError("Salary must be between 0 and 1,000,000"); return; }
     try {
       await api.updateSalary(editing.id, val);
       setEditing(null);
